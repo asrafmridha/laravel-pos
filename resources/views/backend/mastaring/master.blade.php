@@ -9,7 +9,7 @@
 
   <body>
 
-  @include('backend.includes.leftbar')
+    @include('backend.includes.leftbar')
   @include('backend.includes.topbar')
   @include('backend.includes.rightbar')
     <!-- ########## START: MAIN PANEL ########## -->
