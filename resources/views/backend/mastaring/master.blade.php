@@ -24,7 +24,7 @@
 
       <div class="br-pagebody">
         <div class="row row-sm">
-            @yield('majid')
+            @yield('asraf')
       </div><!-- row -->
 
       </div><!-- br-pagebody -->

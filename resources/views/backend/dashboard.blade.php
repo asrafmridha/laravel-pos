@@ -1,5 +1,5 @@
 @extends('backend.mastaring.master')
-       @section('majid')
+       @section('asraf')
        <div class="col-sm-6 col-xl-3">
             <div class="bg-info rounded overflow-hidden">
               <div class="pd-x-20 pd-t-20 d-flex align-items-center">
