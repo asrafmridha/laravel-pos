@@ -1,41 +1,6 @@
-
-<!DOCTYPE html>
-<html lang="en">
-  
-   {{-- head tag here --}}
-
-   @extends('backend.includes.head')
-
-  <body>
-
-    <!-- ########## START: LEFT PANEL ########## -->
-    
-           @extends('backend.includes.leftbar')
-    <!-- ########## END: LEFT PANEL ########## -->
-
-    <!-- ########## START: HEAD PANEL ########## -->
-      @extends('backend.includes.headpanel')
-
-    <!-- ########## END: HEAD PANEL ########## -->
-
-    <!-- ########## START: RIGHT PANEL ########## -->
-    
-    @extends('backend.includes.rightpanel')
-    <!-- ########## END: RIGHT PANEL ########## --->
-
-    <!-- ########## START: MAIN PANEL ########## -->
-    <div class="br-mainpanel">
-      <div class="br-pagetitle">
-        <i class="icon ion-ios-home-outline"></i>
-        <div>
-          <h4>Dashboard</h4>
-          <p class="mg-b-0">Do bigger things with Bracket plus, the responsive bootstrap 4 admin template.</p>
-        </div>
-      </div>
-
-      <div class="br-pagebody">
-        <div class="row row-sm">
-          <div class="col-sm-6 col-xl-3">
+@extends('backend.mastaring.master')
+       @section('majid')
+       <div class="col-sm-6 col-xl-3">
             <div class="bg-info rounded overflow-hidden">
               <div class="pd-x-20 pd-t-20 d-flex align-items-center">
                 <i class="ion ion-earth tx-60 lh-0 tx-white op-7"></i>
@@ -380,17 +345,7 @@
             </div><!-- card -->
 
           </div><!-- col-4 -->
-        </div><!-- row -->
 
-      </div><!-- br-pagebody -->
-     
-
-      @extends('backend.includes.footer')
-
+          @endsection
         
-    </div><!-- br-mainpanel -->
-    <!-- ########## END: MAIN PANEL ########## -->
-
-     @extends('backend.includes.script')
-  </body>
-</html>
+        
