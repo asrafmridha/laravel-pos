@@ -32,6 +32,10 @@ Route::post('/addbranch',[BranchController::class,'addbranch'])->name('addbranch
 
 Route::get('/managebranch',[BranchController::class,'managebranch'])->name('managebranch');
 
+//Route for status Control
+
+Route::get('/status',[BranchController::class,'status'])->name('status');
+
 
 });
 
