@@ -73,4 +73,15 @@ class BranchController extends Controller
         $branchdelete->delete();
         return redirect()->back()->with('message','Delete Successfully');
     }
+    function editbranchview($id){
+        $brancfinddata=Branch::find($id);
+        return view("backend.pages.branch.editbranchview",compact('brancfinddata'));
+    }
+
+
+    function editbranch(Request $request, $id){
+
+
+
+    }
 }
