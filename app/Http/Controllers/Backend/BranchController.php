@@ -46,4 +46,20 @@ class BranchController extends Controller
 
         return view('backend.pages.branch.manage',compact('branchalldata'));
     }
+
+    function status($id){
+        $brancstatus=Branch::find($id);
+
+         if($brancstatus->status==1){
+            $brancstatus->status=2;
+         }
+         else{
+            $brancstatus->status=1;
+         }
+         $brancstatus->update();
+         return redirect()->back()->with('message','Changes');
+
+        
+
+    }
 }
