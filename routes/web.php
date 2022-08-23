@@ -34,7 +34,16 @@ Route::get('/managebranch',[BranchController::class,'managebranch'])->name('mana
 
 //Route for status Control
 
-Route::get('/status',[BranchController::class,'status'])->name('status');
+Route::get('/status/{id}',[BranchController::class,'status'])->name('status');
+
+//for delete branch
+Route::get('deletebranch/{id}',[BranchController::class,'deletebranch'])->name('deletebranch');
+
+// for editbranch
+Route::get('editbranch/{id}',[BranchController::class,'editbranch'])->name('editbranch');
+
+
+
 
 
 });
