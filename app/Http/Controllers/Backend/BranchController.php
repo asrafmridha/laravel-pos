@@ -42,6 +42,8 @@ class BranchController extends Controller
 
     function managebranch(){
 
-        return view('backend.pages.branch.manage');
+        $branchalldata=Branch::all();
+
+        return view('backend.pages.branch.manage',compact('branchalldata'));
     }
 }
