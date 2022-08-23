@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Backend\BranchController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,18 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('backend.dashboard');
 });
+
+//Route group for Branch
+
+
+Route::group(['prefix'=>'branch'],function(){
+//Route for addbranch view
+Route::get('/addbranchview',[BranchController::class,'addbranchview'])->name('addbranchview');
+
+// Route for add branch
+Route::post('/addbranch',[BranchController::class,'addbranch'])->name('addbranch');
+
+
+});
+
+
