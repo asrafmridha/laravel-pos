@@ -55,8 +55,14 @@
                 
                 <select name="status" class="mt-3 form-control">
                     <option value="">-----Select Status-----</option>
-                    <option value="1"  >Active</option>
-                    <option value="2" >Inactive</option>
+                    <option value="1" @if (old('status')==1)
+                        selected
+                    @endif  >Active</option>
+                    <option value="2"  @if (old('status')==2)
+                    selected
+                @endif
+                    
+                    >Inactive</option>
                 </select>
                
                 <button type="submit" class="mt-3 btn btn-success form-control">Add Branch</button>
