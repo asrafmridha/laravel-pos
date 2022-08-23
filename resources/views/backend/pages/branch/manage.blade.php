@@ -10,23 +10,34 @@
                 <th>Status</th>
                 <th>Active</th>
             </tr>
-            <?php $sl=1; ?>
-            @foreach($branch as $branch)
+          <?php $sl=1; ?>
+            @foreach($branchalldata as $branch) 
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>{{$sl}}</td>
+                <td>{{$branch->name}}</td>
+                <td>{{$branch->manager}}</td>
+                <td>{{$branch->phone}}</td>
+                <td>{{$branch->email}}</td>
                 <td>
-                   
+                    @if ($branch->status==1)
+                    <a href="" class="btn btn-info btn-sm">Active</a>
+    
+                      @else
+                      <a href="" class="btn btn-danger btn-sm">Inactive</a>
+                     
+                  @endif
+    
                 </td>
                 <td>
                     <a href="" class="btn btn-sm btn-info"><i class="fa fa-edit"></i></a>
                     <a href="" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></a>
                 </td>
             </tr>
-            
+
+            <?php  $sl++; ?>
             @endforeach
+           
+            
+           
        </table>
     @endsection
