@@ -28,6 +28,10 @@ Route::get('/addbranchview',[BranchController::class,'addbranchview'])->name('ad
 // Route for add branch
 Route::post('/addbranch',[BranchController::class,'addbranch'])->name('addbranch');
 
+//Route for manage Branch
+
+Route::get('/managebranch',[BranchController::class,'managebranch'])->name('managebranch');
+
 
 });
 
