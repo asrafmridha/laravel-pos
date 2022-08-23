@@ -49,12 +49,29 @@
           }
         }
       });
-      @if(Session::has('message'))
-        toastr.options =
-        {
-          "closeButton" : true,
-          "progressBar" : true
-        }
-        toastr.success("{{ session('message') }}");
-        @endif
+
+
+   @if(Session::has('message'))
+  toastr.options =
+  {
+  	"closeButton" : true,
+  	"progressBar" : true
+  }
+  		toastr.success("{{ session('message') }}");
+  @endif
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </script>
