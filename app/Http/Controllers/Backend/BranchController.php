@@ -17,10 +17,10 @@ class BranchController extends Controller
 
        $request->validate([
 
-      'name'=>'required',
+      'name'=>'required|min:5',
       'manager'=>'required',
       'phone'=>'required',
-      'email'=>'required|unique:posts|email|max:100', 
+      'email'=>'required|email|unique:posts|max:100', 
       'status'=>'required',
 
 
