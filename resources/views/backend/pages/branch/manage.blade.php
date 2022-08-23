@@ -20,10 +20,10 @@
                 <td>{{$branch->email}}</td>
                 <td>
                     @if ($branch->status==1)
-                    <a href="" class="btn btn-info btn-sm">Active</a>
+                    <a href="{{Route('status'),$branch->id}}" class="btn btn-info btn-sm">Active</a>
     
                       @else
-                      <a href="" class="btn btn-danger btn-sm">Inactive</a>
+                      <a href="{{Route('status'),$branch->id}}" class="btn btn-danger btn-sm">Inactive</a>
                      
                   @endif
     
