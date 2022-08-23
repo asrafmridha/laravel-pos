@@ -57,9 +57,20 @@ class BranchController extends Controller
             $brancstatus->status=1;
          }
          $brancstatus->update();
-         return redirect()->back()->with('message','Changes');
+         if($brancstatus->status==1){
+            return redirect()->back()->with('message','Active');
+         }
+         else{
+            return redirect()->back()->with('message','Inactive');
 
-        
+         } 
 
+    }
+
+    function deletebranch($id){
+
+        $branchdelete=Branch::find($id);
+        $branchdelete->delete();
+        return redirect()->back()->with('message','Delete Successfully');
     }
 }
