@@ -1,23 +1,25 @@
 @extends('backend.mastaring.master')
-    @section('majid')
-       <div class="col-md-4">
-            <span class="alert alert-success msg" style="display:none"></span>
-            <input placeholder="Enter Product Name" type="text" class="name form-control mt-3">
-            <span class="text-danger error_name"></span>
-            <textarea placeholder="Enter Description" type="text" class="des form-control mt-3"></textarea>
-            <span class="text-danger error_des"></span>
-            <input placeholder="Enter Product Size" type="text" class="size form-control mt-3">
-            <span class="text-danger error_size"></span>
-            <input type="color" class="color form-control mt-3">
-            <span class="text-danger error_color"></span>
-            <input placeholder="EnterCode " type="text" class="product_code form-control mt-3">
-            <span class="text-danger error_product_code"></span>
-            <input placeholder="Enter Cost Price" type="number" class="cost_price form-control mt-3">
-            <span class="text-danger error_cost_price"></span>
-            <input placeholder="Enter Sale Price" type="number" class="sale_price form-control mt-3">
-            <span class="text-danger error_sale_price"></span>
-            <button class="btn-add btn btn-success form-control mt-3">Add Product</button>
-       </div>
+    @section('asraf')
+
+    <div class="col-md-4">
+      <span class="alert alert-success msg" style="display:none"></span>
+      <input placeholder="Enter Product Name" type="text" class="name form-control mt-3">
+      <span class="text-danger error_name"></span>
+      <textarea placeholder="Enter Description" type="text" class="des form-control mt-3"></textarea>
+      <span class="text-danger error_des"></span>
+      <input placeholder="Enter Product Size" type="text" class="size form-control mt-3">
+      <span class="text-danger error_size"></span>
+      <input type="color" class="color form-control mt-3">
+      <span class="text-danger error_color"></span>
+      <input placeholder="EnterCode " type="text" class="product_code form-control mt-3">
+      <span class="text-danger error_product_code"></span>
+      <input placeholder="Enter Cost Price" type="number" class="cost_price form-control mt-3">
+      <span class="text-danger error_cost_price"></span>
+      <input placeholder="Enter Sale Price" type="number" class="sale_price form-control mt-3">
+      <span class="text-danger error_sale_price"></span>
+      <button class="btn-add btn btn-success form-control mt-3">Add Product</button>
+ </div>
+     
        <div class="col-md-8">
             <table class="table">
                <thead>
