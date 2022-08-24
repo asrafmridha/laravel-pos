@@ -73,15 +73,26 @@ class BranchController extends Controller
         $branchdelete->delete();
         return redirect()->back()->with('message','Delete Successfully');
     }
-    function editbranchview($id){
-        $brancfinddata=Branch::find($id);
-        return view("backend.pages.branch.editbranchview",compact('brancfinddata'));
-    }
+    
+  function editbranchview($id){
+   $editbranch= Branch::find($id);
+   return view("backend.pages.branch.editbranchview",compact('editbranch'));
 
 
-    function editbranch(Request $request, $id){
+  }
+
+     function editbranch(Request $request, $id){
+      $editbranchdata= Branch::find($id);
+
+      $editbranchdata->name=$request->name;
+      $editbranchdata->manager=$request->manager;
+      $editbranchdata->email=$request->email;
+      $editbranchdata->phone=$request->phone;
+      $editbranchdata->status=$request->status;
+      $editbranchdata->update();
+
+      return redirect()->back()->with('message','Branch information Update Successfully');
 
 
-
-    }
+     }
 }
