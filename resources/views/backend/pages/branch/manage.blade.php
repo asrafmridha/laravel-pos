@@ -29,8 +29,8 @@
     
                 </td>
                 <td>
-                    <button href="{{Route('editbranch',$branch->id)}}" class="btn btn-sm btn-info"><i class="fa fa-edit"></i></button>
-                    <a href="{{Route('deletebranch',$branch->id)}}"  class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></a>
+                    <a  href="{{Route('editbranchview',$branch->id)}}" class="btn btn-sm btn-info"><i class="fa fa-edit"></i></a>
+                    <a onclick="return confirm('Are You Sure want to delete this branch?')" href="{{Route('deletebranch',$branch->id)}}"  class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></a>
                 </td>
             </tr>
 
