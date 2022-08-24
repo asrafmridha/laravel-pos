@@ -11,7 +11,7 @@
       <span class="text-danger error_size"></span>
       <input type="color" class="color form-control mt-3">
       <span class="text-danger error_color"></span>
-      <input placeholder="EnterCode " type="text" class="product_code form-control mt-3">
+      <input placeholder="Enter Code " type="text" class="product_code form-control mt-3">
       <span class="text-danger error_product_code"></span>
       <input placeholder="Enter Cost Price" type="number" class="cost_price form-control mt-3">
       <span class="text-danger error_cost_price"></span>
@@ -91,6 +91,13 @@
     </div>
   </div>
 </div>
+
+
     @endsection
+
+    
+
         
         
+
+    
