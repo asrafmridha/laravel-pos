@@ -40,15 +40,26 @@ Route::get('/status/{id}',[BranchController::class,'status'])->name('status');
 Route::get('deletebranch/{id}',[BranchController::class,'deletebranch'])->name('deletebranch');
 
 //Route for editbranchview 
-Route::get('editbranchview',[BranchController::class,'editbranchview'])->name('editbranchview');
+Route::get('editbranchview/{id}',[BranchController::class,'editbranchview'])->name('editbranchview');
 
 // for editbranch
-Route::get('editbranch/{id}',[BranchController::class,'editbranch'])->name('editbranch');
+
+Route::post('editbranch/{id}',[BranchController::class,'editbranch'])->name('editbranch');
+
+});
+
+
+//Route group for Product
+
+Route::group(['prefix'=>'product'],function(){
+
 
 
 
 
 
 });
+
+
 
 
