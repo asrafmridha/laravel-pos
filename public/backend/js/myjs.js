@@ -158,6 +158,57 @@ jQuery(document).ready(function(){
 
      //for update product By modal
 
+     jQuery(document).on("click",".updateemodal",function(){
+
+      $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+       });
+
+       var id=jQuery(this).val();
+       var uname=jQuery('.uname').val();
+       var udescription=jQuery('.udes').val();
+       var usize=jQuery('.usize').val();
+       var ucolor=jQuery('.ucolor').val();
+       var uproduct_code=jQuery('.uproduct_code').val();
+       var ucost_price =jQuery('.ucost_price ').val();
+       var usale_price =jQuery('.usale_price ').val();
+
+      $.ajax({
+        type: "POST",
+        url: "/product/updateproduct/"+id,
+        dataType: "JSON",
+        data:{
+          uname:uname,
+          udescription:udescription,
+          usize:usize,
+          ucolor:ucolor,
+          uproduct_code:uproduct_code,
+          ucost_price:ucost_price,
+          usale_price:usale_price
+
+
+        },
+        success: function (response) {
+        
+          show();
+          jQuery("#updateModal").modal("hide");
+          jQuery(".msg").show().text("Data Updated");
+          jQuery(".msg").fadeOut(1000);
+          
+          
+        }
+      });
+
+
+
+
+
+
+
+     });
+
 });
 
 

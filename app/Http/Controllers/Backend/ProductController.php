@@ -112,6 +112,11 @@ class ProductController extends Controller
         $updateproduct->sale_price=$request->usale_price;
 
         $updateproduct->update();
+
+        return response()->json([
+
+            'status'=>'success'
+        ]);
         
 
 

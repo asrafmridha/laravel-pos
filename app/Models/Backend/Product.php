@@ -16,8 +16,8 @@ class Product extends Model
         'color',
         'product_code',
         'cost_price',
-        'sale_price',
-        'image'
+        'sale_price'
+       
 
 
 
