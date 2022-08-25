@@ -22,7 +22,7 @@ return new class extends Migration
             $table->string('product_code');
             $table->float('cost_price');
             $table->float('sale_price');
-            $table->string('image');
+            
 
             $table->timestamps();
         });
