@@ -15,8 +15,8 @@ jQuery(document).ready(function(){
             <td>'+item.name+'</td>\
             <td>'+item.cost_price+'</td>\
             <td>'+item.sale_price+'</td>\
-            <td><button id="updatebtn" value="'+item.id+'" class="updatebtn btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#updateeemployee"><i class="fa fa-edit"></i></button>\
-              <button value="'+item.id+'" class="deleteid btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteproduct"><i class="fa fa-trash"></i></button></td>\
+            <td><button id="updatebtn" value="'+item.id+'" class="updatebtn btn btn-success btn-sm" data-toggle="modal" data-target="#updateeemployee"><i class="fa fa-edit"></i></button>\
+              <button value="'+item.id+'" class="deleteid btn btn-danger btn-sm" data-toggle="modal" data-target="#deleteModal"><i class="fa fa-trash"></i></button></td>\
           </tr>';
           
         });
@@ -91,6 +91,34 @@ jQuery(document).ready(function(){
     
     
     
+  });
+
+
+          // for get id from current button and pass into modal button
+        jQuery(document).on("click",".deleteid",function(){
+          var id= jQuery(this).val();
+          jQuery('.deletemodal').val(id);
+
+        });
+
+
+   //for delete
+  jQuery(document).on("click",".deletemodal",function(){
+   
+       var id=jQuery(this).val();
+        
+       $.ajax({
+        type: "GET",
+        url: "/product/deleteproduct/"+id,
+        dataType: "JSON",
+        success: function (response) {
+          show();
+          jQuery("#deleteModal").modal("hide");
+          
+        }
+       });
+        
+
   });
 
 });
