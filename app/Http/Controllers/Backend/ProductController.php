@@ -98,4 +98,24 @@ class ProductController extends Controller
 
 
     }
+  
+    function updateproduct(Request $request, $id){
+
+        
+        $updateproduct= Product::find($id);
+        $updateproduct->name=$request->uname;
+        $updateproduct->description=$request->udescription;
+        $updateproduct->size=$request->usize;
+        $updateproduct->color=$request->ucolor;
+        $updateproduct->product_code=$request->uproduct_code;
+        $updateproduct->cost_price=$request->ucost_price;
+        $updateproduct->sale_price=$request->usale_price;
+
+        $updateproduct->update();
+        
+
+
+    }
+
+
 }
