@@ -16,14 +16,26 @@
             <span class="menu-item-label">Branch</span>
           </a><!-- br-menu-link -->
           <ul class="br-menu-sub">
-            <li class="sub-item"><a href="" class="sub-link">Add Branch</a></li>
-            <li class="sub-item"><a href="" class="sub-link">Manage Branch</a></li>
+            <li class="sub-item"><a href="{{Route('addbranchview')}}" class="sub-link">Add Branch</a></li>
+            <li class="sub-item"><a href="{{Route('managebranch')}}" class="sub-link">Manage Branch</a></li>
           </ul>
         </li>
         <li class="br-menu-item">
           <a href="#" class="br-menu-link with-sub">
             <i class="menu-item-icon icon ion-ios-photos-outline tx-20"></i>
             <span class="menu-item-label">Product</span>
+          </a><!-- br-menu-link -->
+          <ul class="br-menu-sub">
+            <li class="sub-item"><a href="{{Route('productaddview')}}" class="sub-link">Product Manage</a></li>
+          </ul>
+        </li>
+
+        {{-- for purchase --}}
+
+        <li class="br-menu-item">
+          <a href="#" class="br-menu-link with-sub">
+            <i class="menu-item-icon icon ion-ios-photos-outline tx-20"></i>
+            <span class="menu-item-label">Purchase</span>
           </a><!-- br-menu-link -->
           <ul class="br-menu-sub">
             <li class="sub-item"><a href="" class="sub-link">Product Manage</a></li>
