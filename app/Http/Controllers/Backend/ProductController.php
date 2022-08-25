@@ -61,4 +61,31 @@ class ProductController extends Controller
            }
 
     }
+
+    function productview(){
+
+        $productview=Product::all();
+
+        return response()->json([
+
+            'data'=>$productview
+
+        ]);
+
+
+    }
+
+    // function for deleteproduct
+
+    function deleteproduct($id){
+   
+    $deleteproduct=Product::find($id);
+    $deleteproduct->delete();
+
+    return response()->json([
+
+        'status'=>'success'
+    ]);
+
+    }
 }
