@@ -15,7 +15,7 @@ jQuery(document).ready(function(){
             <td>'+item.name+'</td>\
             <td>'+item.cost_price+'</td>\
             <td>'+item.sale_price+'</td>\
-            <td><button id="updatebtn" value="'+item.id+'" class="updatebtn btn btn-success btn-sm" data-toggle="modal" data-target="#updateeemployee"><i class="fa fa-edit"></i></button>\
+            <td><button id="updatebtn" value="'+item.id+'" class="updateid btn btn-success btn-sm" data-toggle="modal" data-target="#updateModal"><i class="fa fa-edit"></i></button>\
               <button value="'+item.id+'" class="deleteid btn btn-danger btn-sm" data-toggle="modal" data-target="#deleteModal"><i class="fa fa-trash"></i></button></td>\
           </tr>';
           
@@ -80,9 +80,16 @@ jQuery(document).ready(function(){
           }
           else{
 
-          
+          show();
            jQuery(".msg").show().text("Data Saved");
            jQuery(".msg").fadeOut(1000);
+           jQuery('.name').val("");
+           jQuery('.des').val("");
+           jQuery('.size').val("");
+           jQuery('.color').val("");
+           jQuery('.product_code').val("");
+           jQuery('.cost_price ').val("");
+           jQuery('.sale_price ').val("");
           }
           
               
@@ -120,6 +127,36 @@ jQuery(document).ready(function(){
         
 
   });
+
+
+  // for update Show Product 
+     jQuery(document).on("click",".updateid",function(){
+      var id=jQuery(this).val();
+       jQuery(".updateemodal").val(id);
+    $.ajax({
+      type: "GET",
+      url: "/product/updateshow/"+id,
+      data: "data",
+      dataType: "JSON",
+      success: function (response) {
+   
+         jQuery(".uname").val(response.status.name);
+         jQuery(".udes").val(response.status.description);
+         jQuery(".usize").val(response.status.size);
+         jQuery(".ucost_price").val(response.status.cost_price);
+         jQuery(".usale_price").val(response.status.sale_price);
+         jQuery(".uproduct_code").val(response.status.product_code);
+         jQuery(".ucolor").val(response.status.color);
+         
+        
+        
+      }
+    });
+
+
+     });
+
+     //for update product By modal
 
 });
 

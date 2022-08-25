@@ -88,4 +88,14 @@ class ProductController extends Controller
     ]);
 
     }
+
+    function updateshow($id){
+       $updateshow=Product::find($id);
+       return response()->json([
+
+          'status'=>$updateshow
+       ]);
+
+
+    }
 }

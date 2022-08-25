@@ -28,7 +28,7 @@
                         <th>Name</th>
                         <th>Cost Price</th>
                         <th>Sale Price</th>
-                        <th>Action</th>
+                        <th >Action</th>
                     </tr>
                </thead>
                <tbody class="data">
@@ -37,8 +37,13 @@
             </table>
        </div>
 
-<!-- Delete Modal -->
-<div class="modal fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+
+
+
+
+<!-- Modal For Delete Product -->
+<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -48,49 +53,72 @@
         </button>
       </div>
       <div class="modal-body">
-        Are Really Want to Delete this Product?
+       Are You Sure Want to Delete this Product?
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="delete btn btn-danger">Confrim</button>
+        <button type="button" class="deletemodal btn btn-primary">Confirm</button>
       </div>
     </div>
   </div>
 </div>
 
-<!-- Edit Modal -->
-<div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+
+
+<!-- Modal For Update Product -->
+<div class="modal fade" id="updateModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Update Product</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Confirmation Message</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-            <input placeholder="Enter Product Name" type="text" class=" form-control mt-3"  id="name">
-            
-            <textarea placeholder="Enter Description" type="text" class=" form-control mt-3" id="des"></textarea>
-            
-            <input placeholder="Enter Product Size" type="text" class=" form-control mt-3" id="size">
-            
-            <input type="color" class=" form-control mt-3" id="color">
-            
-            <input placeholder="Enter Code" readonly type="text" class=" form-control mt-3" id="product_code">
-           
-            <input placeholder="Enter Cost Price" type="number" class=" form-control mt-3" id="cost_price">
-            
-            <input placeholder="Enter Sale Price" type="number" class=" form-control mt-3" id="sale_price">
-            
+
+        
+          <input placeholder="Enter Product Name" type="text" class="uname form-control mt-3">
+        
+          <textarea placeholder="Enter Description" type="text" class="udes form-control mt-3"></textarea>
+          <span class="text-danger error_des"></span>
+          <input placeholder="Enter Product Size" type="text" class="usize form-control mt-3">
+          
+          <input type="color" class="color form-control mt-3">
+          <span class="text-danger error_color"></span>
+          <input placeholder="Enter Code " type="text" class="uproduct_code form-control mt-3">
+          
+          <input placeholder="Enter Cost Price" type="number" class="ucost_price form-control mt-3">
+          
+          <input placeholder="Enter Sale Price" type="number" class="usale_price form-control mt-3">
+          
+  
+      
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="edit btn btn-primary">Save changes</button>
+        <button type="button" class="updateemodal btn btn-primary">Update</button>
       </div>
     </div>
   </div>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     @endsection
