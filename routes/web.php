@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Backend\BranchController;
+use App\Http\Controllers\Backend\ProductController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -51,11 +52,22 @@ Route::post('editbranch/{id}',[BranchController::class,'editbranch'])->name('edi
 
 //Route group for Product
 
-Route::group(['prefix'=>'product'],function(){
+Route::group(['prefix'=>'/product'],function(){
 
+    //Route for manageproduct
 
+    Route::get('productaddview',[ProductController::class,'productaddview'])->name('productaddview');
 
+    //Url for productadd
+    Route::post('/productadd',[ProductController::class,'addproduct']);
 
+    // Route for ProductView
+
+    Route::get('/productview',[ProductController::class,'productview']);
+
+    // Route for delete Product 
+
+    Route::get('/deleteproduct/{id}',[ProductController::class,'deleteproduct']);
 
 
 });
