@@ -14,7 +14,15 @@ return new class extends Migration
     public function up()
     {
         Schema::create('purchases', function (Blueprint $table) {
-            $table->id();
+            $table->increments("id");
+            $table->date("date");
+            $table->integer("branch_id");
+            $table->string("company_name");
+            $table->string("invoice")->nullable();
+            $table->string("product_id");
+            $table->float("discount");
+            $table->float("discount_ammount");
+            $table->float("total_ammount");
             $table->timestamps();
         });
     }
