@@ -69,6 +69,10 @@ Route::group(['prefix'=>'/product'],function(){
 
     Route::get('/deleteproduct/{id}',[ProductController::class,'deleteproduct']);
 
+    // Route for updateshow in modal 
+
+    Route::get('updateshow/{id}',[ProductController::class,'updateshow']);
+
 
 });
 
