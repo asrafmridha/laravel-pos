@@ -71,7 +71,11 @@ Route::group(['prefix'=>'/product'],function(){
 
     // Route for updateshow in modal 
 
-    Route::get('updateshow/{id}',[ProductController::class,'updateshow']);
+    Route::get('/updateshow/{id}',[ProductController::class,'updateshow']);
+
+    //Route for update Product by ajax
+
+    Route::post('/updateproduct/{id}',[ProductController::class,'updateproduct']);
 
 
 });
