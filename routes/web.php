@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\Backend\BranchController;
 use App\Http\Controllers\Backend\ProductController;
+use App\Http\Controllers\PurchaseController;
+use App\Models\Backend\Purchase;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -79,6 +81,23 @@ Route::group(['prefix'=>'/product'],function(){
 
 
 });
+
+//Route group for Purchase
+   
+  Route::group(["prefix"=>"/purchase"],function(){
+   //Route for Purchaseview
+    Route::get('/purchaseview',[PurchaseController::class,'purchaseview'])->name('purchaseview');
+     // Route for show cost Price 
+
+    Route::get('/costprice/{id}',[PurchaseController::class,'costprice']);
+
+    //Route for store data in Purchase table
+    Route::post('/store',[PurchaseController::class,'costprice']);
+
+
+
+
+  });
 
 
 
