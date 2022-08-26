@@ -56,10 +56,53 @@ jQuery(document).ready(function(){
             jQuery(".grand_amount").val(null);
             jQuery(".discount_amount").val(null);
         }
+
+       });
+
+       jQuery(".btn-purchaseAdd").click(function()  { 
+
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+           });
         
+        var date= jQuery(".date").val();
+        var branch_id= jQuery(".branch_id").val(); 
+        var company_name= jQuery(".company_name").val();
+        var invoice= jQuery(".invoice").val();
+        var product_id= jQuery(".product_id").val();
+        var total_amount= jQuery(".total_amount").val();
+        var discount= jQuery(".discount").val();
+        var discount_amount= jQuery(".discount_amount").val();
+        var grand_amount= jQuery(".grand_amount").val();
+        var quantity=jQuery(".quantity").val();
 
 
+        $.ajax({
+            type: "POST",
+            url: "/purchase/store",
+            dataType: "JSON",
+            data: {
+                date:date,
+                branch_id:branch_id,
+                company_name:company_name,
+                invoice:invoice,
+                total_amount:total_amount,
+                discount:discount,
+                discount_amount:discount_amount,
+                grand_amount:grand_amount,
+                product_id:product_id,
+                quantity:quantity
 
+
+            },
+            success: function (response) {
+
+                alert("save");
+                
+            }
+        });
 
 
        });
