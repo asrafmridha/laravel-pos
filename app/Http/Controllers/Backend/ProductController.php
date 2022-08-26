@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Backend\Branch;
 use App\Models\Backend\Product;
 use Dotenv\Repository\RepositoryInterface;
 // use Illuminate\Contracts\Validation\Validator;
@@ -13,7 +14,7 @@ class ProductController extends Controller
 {
     function productaddview(){
 
-
+      
         return view('backend.pages.product.manage');
     }
 
