@@ -7,6 +7,7 @@ use App\Models\Backend\Product;
 use App\Models\Backend\Purchase;
 use App\Models\Stock;
 use Illuminate\Http\Request;
+use Illuminate\Validation\Rules\Exists;
 
 class PurchaseController extends Controller
 {
@@ -36,7 +37,7 @@ class PurchaseController extends Controller
           return response()->json([
             'status'=>'empty'
 
-         ]);
+         ]); 
         }
         
         
@@ -55,30 +56,30 @@ class PurchaseController extends Controller
         $purchasestore->product_id        =$request->product_id;
         $purchasestore->total_ammount      =$request->grand_amount;
 
-        $stock= Stock::find($request->product_id);
+        $stock= Stock::where('product_id',$request->product_id)->first();
           
         if($stock!=null){
-         $stock->quantity = $request->quantity+$stock->quantity;
-         $stock->update();
-  
+
+          $stock->quantity = $request->quantity+$stock->quantity;
+          $stock->update();
         }
-      
-        
+        else{
+       
 
-    
-         
+         $stock= new Stock();
+         $stock->branch_id=$request->branch_id;
+         $stock->product_id=$request->product_id;
+         $stock->quantity=$request->quantity;
+         $stock->save();
 
+        }
 
         $purchasestore->save();
 
-
-
-
         return response()->json([
 
-         "status"=>"success"
+             'status'=>'success'
 
         ]);
-
        }
 }
