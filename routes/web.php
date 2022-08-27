@@ -92,13 +92,15 @@ Route::group(['prefix'=>'/product'],function(){
     Route::get('/costprice/{id}',[PurchaseController::class,'costprice']);
 
     //Route for store data in Purchase table
-    Route::post('/store',[PurchaseController::class,'costprice']);
+    Route::post('/store',[PurchaseController::class,'purchasestore']);
 
 
 
 
   });
 
+  Route::group(["prefix"=>"/stock"],function(){
 
-
+     Route::get('/stock',[PurchaseController::class,'stockview']);
+  });
 
