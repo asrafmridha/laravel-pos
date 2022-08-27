@@ -56,7 +56,7 @@ class PurchaseController extends Controller
         $purchasestore->product_id        =$request->product_id;
         $purchasestore->total_ammount      =$request->grand_amount;
 
-        $stock= Stock::where('product_id',$request->product_id)->first();
+        $stock= Stock::where('product_id',$request->product_id)->where('branch_id',$request->branch_id)->first();
           
         if($stock!=null){
 
