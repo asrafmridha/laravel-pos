@@ -24,9 +24,9 @@
     <script src="{{ asset('backend') }}/js/dashboard.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
     <script src="{{ asset('backend') }}/js/myjs.js"></script>
+    <script src="{{ asset('backend') }}/js/purchase.js"></script>
 
-
-
+    
    <script>
       $(function(){
         'use strict'

@@ -7,7 +7,13 @@
       <span class="text-danger error_name"></span>
       <textarea placeholder="Enter Description" type="text" class="des form-control mt-3"></textarea>
       <span class="text-danger error_des"></span>
-      <input placeholder="Enter Product Size" type="text" class="size form-control mt-3">
+      <select  class="size form-control mt-2">
+        <option >-----SELECT-------</option>
+        <option value="XXL">XXL</option>
+        <option value="XL">XL</option>
+        <option value="L">L</option>
+        <option value="M">M</option>
+      </select>
       <span class="text-danger error_size"></span>
       <input type="color" class="color form-control mt-3">
       <span class="text-danger error_color"></span>
@@ -85,7 +91,7 @@
           <span class="text-danger error_des"></span>
           <input placeholder="Enter Product Size" type="text" class="usize form-control mt-3">
           
-          <input type="color" class="color form-control mt-3">
+          <input type="color" class="ucolor form-control mt-3">
           <span class="text-danger error_color"></span>
           <input placeholder="Enter Code " type="text" class="uproduct_code form-control mt-3">
           

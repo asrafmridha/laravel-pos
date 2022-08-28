@@ -11,7 +11,7 @@
                 </div>
                     
                 @enderror
-                <input value="" type="text" name="name" placeholder="Enter Branch Name" class="mt-3 form-control">
+                <input value="{{ old('name') }}" type="text" name="name" placeholder="Enter Branch Name" class="mt-3 form-control">
                 @error('manager')
 
                 <div class="alert alert-danger">

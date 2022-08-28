@@ -91,7 +91,7 @@ class BranchController extends Controller
       $editbranchdata->status=$request->status;
       $editbranchdata->update();
 
-      return redirect()->back()->with('message','Branch information Update Successfully');
+      return redirect()->route('managebranch')->with('message','Branch information Update Successfully');
 
 
      }

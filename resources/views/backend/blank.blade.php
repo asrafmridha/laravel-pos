@@ -1,5 +1,5 @@
 @extends('backend.mastaring.master')
-    @section('majid')
+    @section('asraf')
        <div class="bg-dark p-5">
 
        </div>

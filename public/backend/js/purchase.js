@@ -13,6 +13,16 @@ jQuery(document).ready(function(){
             if(response.status=="success"){
              
                 jQuery(".cost_price").val(response.data.cost_price);
+
+                if(response.stock.length==0){
+                    jQuery(".astock").val("0");     
+                }
+                else{
+
+                    $.each(response.stock, function (array, item) { 
+                        jQuery(".astock").val(item.quantity);
+                    });
+                }
                 
                
             }
@@ -23,6 +33,7 @@ jQuery(document).ready(function(){
                 jQuery(".discount").val(null);
                 jQuery(".discount_amount").val(null);
                 jQuery(".quantity").val(null);
+                jQuery(".astock").val("0");
               
             }
            

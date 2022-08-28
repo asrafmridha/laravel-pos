@@ -98,9 +98,9 @@ Route::group(['prefix'=>'/product'],function(){
 
 
   });
-
+     // Create route for stockview
   Route::group(["prefix"=>"/stock"],function(){
 
-     Route::get('/stock',[PurchaseController::class,'stockview']);
+     Route::get('/stock',[PurchaseController::class,'stockview'])->name("stockview");
   });
 
