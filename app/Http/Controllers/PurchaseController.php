@@ -65,13 +65,11 @@ class PurchaseController extends Controller
         }
         else{
        
-
          $stock= new Stock();
          $stock->branch_id=$request->branch_id;
          $stock->product_id=$request->product_id;
          $stock->quantity=$request->quantity;
          $stock->save();
-
         }
 
         $purchasestore->save();
@@ -81,5 +79,12 @@ class PurchaseController extends Controller
              'status'=>'success'
 
         ]);
+       }
+
+       function stockview(){
+
+        $stock=Stock::all();
+
+        return view("backend.pages.stock.productreport",compact('stock'));
        }
 }
