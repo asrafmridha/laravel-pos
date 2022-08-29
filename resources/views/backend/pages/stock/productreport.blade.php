@@ -15,18 +15,21 @@
             <th>Quantity</th>
           
         </tr>
-
-        @foreach ($stock as $stock)
+            <?php $slNo=1;?>
+        @foreach ($stock as $item)
         <tr>
-            <td>{{1}}</td>
-            <td>{{ $stock->branch_info->name}}</td>
-            <td>{{ $stock->branch_info->manager}}</td>
-            <td>{{$stock->branch_info->cost_price}}</td>
-            <td>{{$stock->product_info->sale_Price}}</td>
-            <td>{{$stock->quantity}}</td>
+            <td>{{$slNo}}</td>
+            <td>{{ $item->branch_info->name}}</td>
+            <td>{{ $item->branch_info->manager}}</td>
+            <td>{{$item->product_info->cost_price}}</td>
+             <td>{{$item->product_info->sale_price}}</td>
+            <td>{{$item->quantity}}</td>
             
            
         </tr>
+
+        <?php $slNo++ ;?>
+
         @endforeach
     
   

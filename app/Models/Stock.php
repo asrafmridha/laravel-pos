@@ -20,13 +20,17 @@ class Stock extends Model
     ];
 
     public function branch_info()
-        {
-            return $this->belongsTo(Branch::class,"branch_id");
-        }
+    {
+        return $this->belongsTo(Branch::class,"branch_id");
+    }
 
-        public function product_info()
-        {
-            return $this->belongsTo(Product::class,"product_id");
-        }
+    public function product_info()
+    {
+        return $this->belongsTo(Product::class,"product_id");
+    }
+
+   
+
+      
 
 }
