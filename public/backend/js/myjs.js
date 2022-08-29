@@ -11,6 +11,7 @@ jQuery(document).ready(function(){
         var data= "";
         $.each(response.data, function (key, item) { 
           data+='<tr>\
+          <td>'+item.id+'</td>\
             <td>'+item.product_code+'</td>\
             <td>'+item.name+'</td>\
             <td>'+item.cost_price+'</td>\

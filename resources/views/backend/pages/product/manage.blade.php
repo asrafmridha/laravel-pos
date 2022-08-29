@@ -30,6 +30,7 @@
             <table class="table">
                <thead>
                     <tr>
+                       <th>Product Id</th>
                         <th>Product Code</th>
                         <th>Name</th>
                         <th>Cost Price</th>
