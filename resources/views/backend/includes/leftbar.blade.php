@@ -4,7 +4,7 @@
       <label class="sidebar-label pd-x-10 mg-t-20 op-3">Navigation</label>
       <ul class="br-sideleft-menu">
         <li class="br-menu-item">
-          <a href="" class="br-menu-link active">
+          <a href="{{Route('/')}}" class="br-menu-link active">
             <i class="menu-item-icon icon ion-ios-home-outline tx-24"></i>
             <span class="menu-item-label">Dashboard</span>
           </a><!-- br-menu-link -->
