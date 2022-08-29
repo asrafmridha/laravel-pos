@@ -5,13 +5,25 @@ namespace App\Http\Controllers\Backend;
 use App\Http\Controllers\Controller;
 use App\Models\Backend\Branch;
 use App\Models\Backend\Product;
+use App\Models\Stock;
 use Dotenv\Repository\RepositoryInterface;
 // use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
 
 class ProductController extends Controller
 {
+
+    function dashboard(){
+
+        $stock= DB::table('stocks')->sum('quantity');
+         $branch=Branch::count('name');
+        return view('backend.dashboard',compact('stock','branch'));
+    }
+
+
+
     function productaddview(){
 
       
